@@ -30,12 +30,15 @@
         max-width: 100%;
         gap: 15px;
     }
-    .img1 {
+    .img {
     width: 130px;
     margin-top: 40px;
     border: 3px solid #cfcbcb00;
-    
-    }
+    transition: all .5s ease;
+ } 
+ .img:hover {
+    transform: scale(1.025);
+ }
     p{
         color: white;
         text-align: center;
@@ -55,11 +58,13 @@
     border: 1px solid #e4dede; 
     text-align: center;
     cursor: pointer;
-    transition: all 5s ease;
+    transition: all .5s ease;
     }
-    button :hover {
-        transform:  scale(1.025);
+    button:hover {
+        transform: scale(1.025);
     }
+   
+
     
 
 
