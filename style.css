@@ -55,7 +55,12 @@
     border: 1px solid #e4dede; 
     text-align: center;
     cursor: pointer;
+    transition: all 5s ease;
     }
+    button :hover {
+        transform:  scale(1.025);
+    }
+    
 
 
 
