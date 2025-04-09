@@ -6,7 +6,7 @@
  
  body { 
         background-color: black;
-    }
+    } 
     
       
     h2{
@@ -34,13 +34,13 @@
         max-width: 100%;
         gap: 15px;
     }
-    .img {
+    img {
     width: 130px;
     margin-top: 40px;
     border: 3px solid #cfcbcb00;
     transition: all .5s ease;
  } 
- .img:hover {
+    img:hover {
     transform: scale(1.025);
  }
     p{
