@@ -28,7 +28,7 @@ ul{
 }
 li{
     padding: 24px;
-    background-color: yellow;
+    background-color: #ffffff;
     height: 250px;
     list-style: none;
     display: flex;
@@ -45,7 +45,7 @@ li div{
 }
 .cartul{
     position: absolute;
-    top: 84px;
+    top: 120px;
     left: 0;
     padding: 0;
     width: 100%;
@@ -53,19 +53,52 @@ li div{
     max-height: 400px;
     overflow: auto;
     list-style: none;
+    border-top: 5px solid #daaf00;
 }
-
-
-li .imagens_pequenas {
+ .imagens_pequenas li {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 12px;
+    
+}
+.imagens_pequenas img:hover{
+     transform: scale(1.6);  /* -- transformar em amarelo a borda no hover, como? */
+     border-color: yellow;
+     border: 1px solid yellow;
 }
 .imagens_pequenas img {
-    height: 30px;
-   
+    height: 45px;
+    border: 1px solid #3837371c;
+    transition: all 1s ease;
+    
 
 }
+.imagemgrande {
+    height: 200px;
+    margin-right: 750px; /* como fazer uma possível mudança para não interferir em outras resoluçoes? */
+    transition: all 1s ease;   
+    
+}
 
-        
+.imagemgrande:hover{
+    transform: scale(1.25); 
+    border-color: yellow;
+    border: 1px solid yellow;
+}
+.imagemgrandetv{
+    height: 200px; 
+    margin-right: 750px; 
+    transition: all 1s ease;
+       
+   
+   
+}
+.imagemgrandetv:hover{
+    transform: scale(1.25); 
+    border-color: yellow;
+    border: 1px solid yellow;
+}
+.logo {
+    height: 54px;
+}
