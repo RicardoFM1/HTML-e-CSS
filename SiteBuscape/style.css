@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #f2f2f2;
+    background-color: #f6f6f6;
 }
 header{
     background-color: #ffcd00;
@@ -54,6 +54,10 @@ li div{
     overflow: auto;
     list-style: none;
     border-top: 5px solid #daaf00;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    border-radius: 10px;
 }
  .imagens_pequenas li {
     display: flex;
