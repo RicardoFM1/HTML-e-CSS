@@ -1,7 +1,7 @@
 import { data } from "./data.js"
  
-function carrinhoAdicionar(){
-    const button = document.querySelector(".carrinho")
+function carrinhoAbrir(){
+    const button = document.querySelector(".carrinhobtn")
     button.addEventListener("click", ()=>{
         console.log("click")
     const ulcart = document.querySelector(".cartul") 
@@ -19,7 +19,9 @@ function carrinhoAdicionar(){
     } 
 })
 }
-carrinhoAdicionar()
+carrinhoAbrir()
+
+
 
 
 
