@@ -75,6 +75,7 @@ li div{
     height: 45px;
     border: 1px solid #3837371c;
     transition: all 1s ease;
+    aspect-ratio:  1/1;
     
 
 }
