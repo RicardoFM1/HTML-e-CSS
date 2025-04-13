@@ -2,10 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    height: auto;
 }
 
 body {
     background-color: #f6f6f6;
+    overflow: hidden; 
+    width: 100%; 
+    height: 100%; 
 }
 header{
     background-color: #ffcd00;
@@ -29,27 +33,29 @@ ul{
 li{
     padding: 24px;
     background-color: #ffffff;
-    height: 250px;
+    height: auto; 
     list-style: none;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    width: 100%;
+                  
+    
+    
     
 }
 li div{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
+    align-items: flex-start;
+    gap: 8px;
     
 }
 .cartul{
     position: absolute;
     top: 120px;
     left: 0;
-    padding: 0;
-    width: 100%;
-    background-color: #ffcd00;
+    width: 100%;    
+    background-color: #daaf00;
     max-height: 400px;
     overflow: auto;
     list-style: none;
@@ -57,8 +63,14 @@ li div{
     border-left: 2px solid black;
     border-bottom: 2px solid black;
     border-right: 2px solid black;
-    border-radius: 10px;
+    gap: 10px;
+   
 }
+.cartul li{
+    background-color: #c49d00;
+    height: 400px;
+}
+
  .imagens_pequenas li {
     display: flex;
     flex-direction: column;
@@ -67,7 +79,7 @@ li div{
     
 }
 .imagens_pequenas img:hover{
-     transform: scale(1.6);  /* -- transformar em amarelo a borda no hover, como? */
+     transform: scale(1.6);  
      border-color: yellow;
      border: 1px solid yellow;
 }
@@ -77,33 +89,115 @@ li div{
     transition: all 1s ease;
     aspect-ratio:  1/1;
     
-
 }
-.imagemgrande {
+.imagemgrande  {
     height: 200px;
-    margin-right: 750px; /* como fazer uma possível mudança para não interferir em outras resoluçoes? */
+    margin-left: 100px; /* como fazer uma possível mudança para não interferir em outras resoluçoes? */
+    margin-right: 200px;
     transition: all 1s ease;   
-    
 }
-
 .imagemgrande:hover{
     transform: scale(1.25); 
     border-color: yellow;
     border: 1px solid yellow;
 }
-.imagemgrandetv{
-    height: 200px; 
-    margin-right: 750px; 
-    transition: all 1s ease;
-       
-   
-   
-}
 .imagemgrandetv:hover{
     transform: scale(1.25); 
     border-color: yellow;
     border: 1px solid yellow;
+}   
+.imagemgrandetv{
+    height: 200px; 
+    margin-right: 158px;
+    margin-left: 75px;
+    transition: all 1s ease;
 }
 .logo {
     height: 54px;
+    margin-top: 16px;
+}
+.carrinhobtn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    padding: 0;
+    transition: all 0.5s ease;
+
+}
+.carrinhobtn span{
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    border-radius: 2px;
+}
+.carrinhobtn:hover{
+    transition: all 0.5s ease;
+    transform: scale(1.6);
+}
+.destaque{
+    color: white;
+    background-color: #1990df;
+    border: 1px solid #1990df;
+    border-radius: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.produto{
+    height: auto;
+    margin: 0 auto;
+}
+.titulo{
+    border-bottom: 1px solid #bebdbdab;
+    color: #717171;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.quantidade{
+    font-size: 25px;
+    color: #22b14c;
+    font-weight: bolder;
+}
+.preco{
+    font-size: 35px;
+    color: #22b14c;
+    font-weight: bolder;
+}
+.valoravista{
+    color: #22b14c;
+    font-weight: 600;
+}
+.botaotexto{
+    width: auto; 
+    padding: 10px 20px; 
+    border-radius: 4px;
+    max-height: none;
+    background-color: #22b14c;
+    color: white;
+    text-align: center; 
+    white-space: nowrap; 
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+.seta{
+    font-size: 18px;
+    padding-bottom: 4px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    text-align: center; 
+}
+.botaofav{
+  margin-left: 16px;
+  height: 12px;
+  width: 12px;
 }
