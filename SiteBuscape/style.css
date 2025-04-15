@@ -6,8 +6,7 @@
 }
 
 body {
-    background-color: #f6f6f6;
-    overflow: hidden; 
+    background-color: #f6f6f6; 
     width: 100%; 
     height: 100%; 
 }
@@ -71,14 +70,14 @@ li div{
     height: 400px;
 }
 
- .imagens_pequenas li {
+ .imagensp li {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 12px;
     
 }
-.imagens_pequenas img:hover{
+.imagensp img:hover{
      transform: scale(1.6);  
      border-color: yellow;
      border: 1px solid yellow;
@@ -113,8 +112,10 @@ li div{
     transition: all 1s ease;
 }
 .logo {
-    height: 54px;
-    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
 }
 .carrinhobtn{
     background: none;
@@ -197,6 +198,8 @@ li div{
 }
 .botaofav{
   margin-left: 16px;
-  height: 12px;
-  width: 12px;
+  height: 40px;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
 }

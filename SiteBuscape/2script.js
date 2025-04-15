@@ -1,64 +1,94 @@
-import {data} from "./data.js"
+import {data} from "./dataup.js"
+let carrinho = []
 
-function carrinhoAbrir(){
+function openCarrinho(){
     const button = document.querySelector(".carrinhobtn")
-    button.addEventListener("click", ()=>{
+    button.addEventListener("click",()=>{
+        console.log("carrinho")
+        const ulcart = document.querySelector(".cartul")
+        if(ulcart){
+            console.log("if")
+            ulcart.remove()
+        }else{
+            console.log("else")
+            const header = document.querySelector("header")
+            header.insertAdjacentHTML("beforeend",`
+                <ul class="cartul">
+                </ul>
+            `)
+            carrinho.forEach((cart)=>{
+                const ulcart = document.querySelector(".cartul")
+                ulcart.insertAdjacentHTML("beforeend",`
+                
+                <li>${cart.name}</li>
+                
+                `)
+            })
+        }
         
-    const ulcart = document.querySelector(".cartul") 
-    if(ulcart){
-        ulcart.remove()
-    }else{
-        const header = document.querySelector("header")
-        header.insertAdjacentHTML("beforeend", `
-            <ul class="cartul">
-                <li></li>
-                <li></li>
-                 criar uma nova li que aparece os preços,
-                 mas fora do forEach?
-                  
-            </ul>`)
-         } 
-      }    
-  )
+    })
 }
-carrinhoAbrir()
+openCarrinho()
 
-
-function ColocarTextos() {
-    const textosContainer = document.querySelector(".textos1")
-    data.forEach((item) => {
-        if (item.productCelular){
+function ColocarTextos(item) {
+const textosContainer = document.getElementById(`textos${item.product.id}`)
+    // data.items.forEach((item) => {
+        
             textosContainer.insertAdjacentHTML("beforeend", 
         `<div class="produto">
-        <h2 class="titulo">${item.productCelular.nameCelular}<span class="botaofav"><button></button></span></h2>
+        <h2 class="titulo">${item.product.name}
+        <button id="btnfav${item.product.id}" class="botaofav"><img id="imgfav${item.product.id}" src="./Botaofav/botaofav.png" alt="Botao_Favorito"></button>
+        </h2>
         <span class="destaque">Melhor Preço</span>
-        <p><span class="quantidade">${item.productCelular.priceCelular.installmentsCelular}x R$</span> <span class="preco">${item.productCelular.priceCelular.installmentValueCelular.toFixed(2)}</span></p>
-        <p>ou  <span class="valoravista"> R$ ${item.productCelular.priceCelular.valueCelular.toFixed(2)}</span> à vista</p>
-        <button class="botaotexto">Adicionar ao carrinho<span class="seta">ㅤ></span> </button>
+        <p><span class="quantidade">${item.product.price.installments}x R$</span> <span class="preco">${item.product.price.installmentValue.toFixed(2)}</span></p>
+        <p>ou  <span class="valoravista"> R$ ${item.product.price.value.toFixed(2)}</span> à vista</p>
+        <button id="btnadd${item.product.id}" class="botaotexto">Adicionar ao carrinho<span class="seta">ㅤ></span> </button>
         </div>`
     )
-        }
-    }
-  )
-}
-ColocarTextos()
+        
     
-function ColocarTextos2() {
-    const textosContainer2 = document.querySelector(".textos2");
-    data.forEach((item) => {
-        if (item.productTv) {
-            textosContainer2.insertAdjacentHTML(
-                "beforeend",
-                `<div class="produto">
-                    
-                        <h2 class="titulo">${item.productTv.nameTv}<span class="botaofav"><button></button></span></h2>
-                        <span class="destaque">Melhor Preço</span>
-                        <p><span class="quantidade">${item.productTv.priceTv.installmentsTv}x R$</span> <span class="preco">${item.productTv.priceTv.installmentValueTv.toFixed(2)}</span></p>
-                        <p>ou  <span class="valoravista"> R$ ${item.productTv.priceTv.valueTv.toFixed(2)}</span> à vista</p>
-                        <button class="botaotexto">Adicionar ao carrinho<span class="seta">ㅤ></span></button>
-                </div>`
-            );
-        }
-    });
+
 }
-ColocarTextos2();
+function ColocarImagens(item) {
+    const imagensContainer = document.getElementById(`imagensp${item.product.id}`)
+    item.product.images.forEach((img)=>{
+        imagensContainer.insertAdjacentHTML("beforeend",`
+            <img src="${img}">
+            `
+            
+        )
+    })
+
+
+}
+ 
+    
+function montarLista(){
+    const ulProdutos = document.querySelector(".produtos")
+   
+    data.items.forEach((item)=>{
+    ulProdutos.insertAdjacentHTML("beforeend",`
+        <li>
+        
+        
+            
+            <div class="imagens_pequenas" id="imagensp${item.product.id}">
+                <img src="${item.product.images[0]}" />
+            </div>
+                
+           <div class="textos1" id="textos${item.product.id}"> </div>
+                 
+        </li>
+        
+        `)
+
+        ColocarImagens(item)
+        ColocarTextos(item)
+        const btnadd = document.getElementById(`btnadd${item.product.id}`)
+        btnadd.addEventListener("click",()=>{
+            console.log("add ao carrinho",item.product)
+            carrinho.push(item.product)
+        })
+    })
+}
+montarLista()
