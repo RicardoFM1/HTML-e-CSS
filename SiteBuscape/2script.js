@@ -32,7 +32,6 @@ openCarrinho()
 
 function ColocarTextos(item) {
 const textosContainer = document.getElementById(`textos${item.product.id}`)
-    // data.items.forEach((item) => {
         
             textosContainer.insertAdjacentHTML("beforeend", 
         `<div class="produto">
@@ -50,45 +49,49 @@ const textosContainer = document.getElementById(`textos${item.product.id}`)
 
 }
 function ColocarImagens(item) {
-    const imagensContainer = document.getElementById(`imagensp${item.product.id}`)
-    item.product.images.forEach((img)=>{
-        imagensContainer.insertAdjacentHTML("beforeend",`
-            <img src="${img}">
-            `
-            
-        )
-    })
+    const imagensPequenasContainer = document.getElementById(`imagensp${item.product.id}`);
+    const imagensGrandesContainer = document.getElementById(`imagensg${item.product.id}`);
+    let i = 0;
 
-
+    item.product.images.forEach((img) => {
+        if (i < 3) {
+            imagensPequenasContainer.insertAdjacentHTML("beforeend", `
+                <img class="imagens_pequenas" src="${img}">
+            `);
+        } else {
+            imagensGrandesContainer.insertAdjacentHTML("beforeend", `
+                <img class="imagemgrande" src="${img}">
+            `);
+        }
+        i++;
+    });
 }
- 
-    
-function montarLista(){
-    const ulProdutos = document.querySelector(".produtos")
-   
-    data.items.forEach((item)=>{
-    ulProdutos.insertAdjacentHTML("beforeend",`
-        <li>
-        
-        
-            
-            <div class="imagens_pequenas" id="imagensp${item.product.id}">
-                <img src="${item.product.images[0]}" />
-            </div>
-                
-           <div class="textos1" id="textos${item.product.id}"> </div>
-                 
-        </li>
-        
-        `)
 
-        ColocarImagens(item)
-        ColocarTextos(item)
-        const btnadd = document.getElementById(`btnadd${item.product.id}`)
-        btnadd.addEventListener("click",()=>{
-            console.log("add ao carrinho",item.product)
-            carrinho.push(item.product)
-        })
-    })
+
+
+
+function montarLista() {
+    const ulProdutos = document.querySelector(".produtos");
+
+    data.items.forEach((item) => {
+        ulProdutos.insertAdjacentHTML("beforeend", `
+            <li>
+                <div class="imagens_pequenas" id="imagensp${item.product.id}">
+                    <img src="${item.product.images[0]}" />
+                </div>
+                <div class="imagens_grandes" id="imagensg${item.product.id}"></div>
+                <div class="textos1" id="textos${item.product.id}"></div>
+            </li>
+        `);
+
+        ColocarImagens(item);
+        ColocarTextos(item);
+
+        const btnadd = document.getElementById(`btnadd${item.product.id}`);
+        btnadd.addEventListener("click", () => {
+            console.log("add ao carrinho", item.product);
+            carrinho.push(item.product);
+        });
+    });
 }
 montarLista()
