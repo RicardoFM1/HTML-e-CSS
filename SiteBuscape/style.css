@@ -202,12 +202,12 @@ li div{
     text-align: center; 
 }
 .botaofav{
-  margin-left: 16px;
-  height: 40px;
+  height: 30px;
   width: fit-content;
   display: flex;
   justify-content: center;
-  border: none;
+ 
+
 }
 .imgcart img{
     height: 150px;
@@ -259,4 +259,8 @@ li div{
     background-color: red;
     width: 50px;
     padding: 10px;      /* como padronizar tudo? */
+}
+.subtotalli{
+    display: block;
+    
 }

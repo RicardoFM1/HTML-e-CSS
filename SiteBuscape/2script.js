@@ -32,34 +32,44 @@ function openCarrinho(){
                         </div>
                         <button class="btnremover">X</button>
                         </li>
+                         
+                        
+                        
+                       
                         
                         `)
                         
                     })
+                    ulcart.insertAdjacentHTML("beforeend",`
+                    <li class="subtotal>
+                    <p class="subtotalparcelado">10x de R$ 0,00 </p> 
+                    <p class="subtotalavista">ou R$ 0,00 à vista</p>
+                    </li>
+                    `)
                 }
                 
             })
         }
         openCarrinho()
         
- function removerItem() {
-            const btnRemover = document.querySelectorAll("btnremover")
-            const li = document.querySelectorAll(".licart") 
+//  function removerItem() {
+//             const btnRemover = document.querySelectorAll("btnremover")
+//             const li = document.querySelectorAll(".licart") 
             
-            btnRemover.forEach((btn) => {
-                console.log(btnRemover)
-                btn.addEventListener("click", () => {   // arrumar isso aqui
-                    li.remove()
-                })
-            })
-        }
-        removerItem()
+//             btnRemover.forEach((btn) => {
+//                 console.log(btnRemover)
+//                 btn.addEventListener("click", () => {   // arrumar isso aqui
+//                     li.remove()
+//                 })
+//             })
+//         }
+//         removerItem()
 
         
         function ColocarTextos(item) {
             const textosContainer = document.getElementById(`textos${item.product.id}`)
             if (item.product.id )
-        textosContainer.insertAdjacentHTML("beforeend", 
+                textosContainer.insertAdjacentHTML("beforeend", 
     `<div class="produto">
     <h2 class="titulo">${item.product.name}
     <button id="btnfav${item.product.id}" class="botaofav"><img id="imgfav${item.product.id}" src="./Botaofav/botaofav.png" alt="Botao_Favorito"></button>
@@ -113,19 +123,38 @@ function ColocarImagens(item) {
                     
                     ColocarImagens(item);
                     ColocarTextos(item);
-        
+                    
                     const btnadd = document.getElementById(`btnadd${item.product.id}`);
                     btnadd.addEventListener("click", () => {
                         carrinho.push(item.product);
-            if (numeroClicks > 1){
-                alert("Foram adicionados " + numeroClicks + " itens ao carrinho" )
-            }
+                        if (numeroClicks <= 1){
+                     alert("Foi adicionado " + numeroClicks + " item ao carrinho" )
+
+                        }else{
+                            alert("Foram adicionados " + numeroClicks + " itens ao carrinho" )
+                        }
             numeroClicks++;
         })});
     };
     montarLista()
     
-//    contar itens no carrinho 
+
     
-       
     
+    
+    
+    
+    
+    
+    
+    // function BotaoFavorito() {
+    //     const botaofav = document.querySelectorAll("[id='btnfav']");
+        
+    //     botaofav.forEach((botaofav) => {
+    //         botaofav.addEventListener("click", () => {
+    //             botaofav.classList.toggle("favorito");
+    //             botaofav.classList.toggle("naofavorito");
+    //         });
+    //     });
+    // }
+    // BotaoFavorito();
