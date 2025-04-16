@@ -160,3 +160,10 @@ function ColocarImagens(item) {
     //     });
     // }
     // BotaoFavorito();
+
+
+    // o que falta: 
+    // - fazer o botão de favorito funcionar (não tá funcionando)
+    // - fazer o botão de remover do carrinho funcionar (não tá funcionando)
+    // - fazer o subtotal dos produtos funcionar (não tá funcionando)
+    // - colocar uma notificação de quantos itens tem no carrinho (não tá funcionando)
