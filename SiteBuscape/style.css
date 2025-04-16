@@ -260,7 +260,7 @@ li div{
     width: 50px;
     padding: 10px;      /* como padronizar tudo? */
 }
-.subtotalli{
-    display: block;
-    
+.oi{
+  display: flex;  
+  justify-content: end;
 }

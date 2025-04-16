@@ -12,10 +12,12 @@ function openCarrinho(){
             const header = document.querySelector("header")
             header.insertAdjacentHTML("beforeend",`
                 <ul class="cartul">
+                <li class="subtotal">Subtotal 
+                </li>
                 
                 </ul>
                 `)
-                
+                // somar as parcelas e valor de cada item e colocar aí em cima, como?
                 carrinho.forEach((cart)=>{
                     const ulcart = document.querySelector(".cartul")
                     ulcart.insertAdjacentHTML("beforeend",`
