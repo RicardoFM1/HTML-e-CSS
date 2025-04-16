@@ -67,7 +67,7 @@ li div{
 }
 .cartul li{
     background-color: #c49d00;
-    height: 400px;
+    height: 200px;
 }
 
 
@@ -155,8 +155,7 @@ li div{
     margin-top: 10px;
 }
 .produto{
-    height: auto;
-    margin: 0 auto;
+  
 }
 .titulo{
     border-bottom: 1px solid #bebdbdab;
@@ -208,4 +207,56 @@ li div{
   width: fit-content;
   display: flex;
   justify-content: center;
+  border: none;
+}
+.imgcart img{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-left: 50px;
+    border: 1px solid black;
+    
+    
+}
+.produtoscart{
+    align-items: center;
+    margin-left: 50px;
+    gap: 10px;
+}
+.textocart{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+    
+}
+.valorcart{
+    font-size: 20px;
+    font-weight: bolder;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50%;
+    width: 50%;
+}
+.parcelacart{
+    font-size: 20px;
+    font-weight: bolder;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50%;
+    width: 50%;
+    
+}
+.btnremover{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-left: 20%;
+    background-color: red;
+    width: 50px;
+    padding: 10px;      /* como padronizar tudo? */
 }
