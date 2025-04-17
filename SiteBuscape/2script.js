@@ -9,7 +9,15 @@ function openCarrinho(){
         if(ulcart){
             ulcart.remove()
         }else{
-            atualizarCarrinho()
+            
+            const header = document.querySelector("header")
+            header.insertAdjacentHTML("beforeend",`
+                <ul class="cartul">
+                
+                
+                </ul>
+                `)
+                atualizarCarrinho()
         }
         })
         
@@ -39,16 +47,8 @@ function openCarrinho(){
         
         
         function atualizarCarrinho(){
-            ulcart = document.querySelector(".cartul")
-            const header = document.querySelector("header")
-            header.insertAdjacentHTML("beforeend",`
-                <ul class="cartul">
-                
-                
-                </ul>
-                `)
-                // somar as parcelas e valor de cada item e colocar aí em cima, como?
                 const ulcart = document.querySelector(".cartul")
+                ulcart.innerHTML = ""
                 carrinho.forEach((cart)=>{
                     ulcart.insertAdjacentHTML("beforeend",`
                         
