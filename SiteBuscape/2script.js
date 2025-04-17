@@ -9,17 +9,47 @@ function openCarrinho(){
         if(ulcart){
             ulcart.remove()
         }else{
+            atualizarCarrinho()
+        }
+        })
+        
+        }
+        openCarrinho()
+        
+ function removerItem() {
+            const btnRemover = document.querySelectorAll(".btnremover")
+            btnRemover.forEach((btn) => {
+               
+                btn.addEventListener("click",()=>{
+                    console.log(btn.id)
+                    const index = carrinho.findIndex((item) => item.id == btn.id)
+                    console.log(index,carrinho)
+                    carrinho.splice(index,1)
+                    atualizarCarrinho()
+                })
+            
+                
+
+            })
+                
+            
+                
+            }
+        
+        
+        
+        function atualizarCarrinho(){
+            ulcart = document.querySelector(".cartul")
             const header = document.querySelector("header")
             header.insertAdjacentHTML("beforeend",`
                 <ul class="cartul">
-                <li class="subtotal">Subtotal 
-                </li>
+                
                 
                 </ul>
                 `)
                 // somar as parcelas e valor de cada item e colocar aí em cima, como?
+                const ulcart = document.querySelector(".cartul")
                 carrinho.forEach((cart)=>{
-                    const ulcart = document.querySelector(".cartul")
                     ulcart.insertAdjacentHTML("beforeend",`
                         
                         
@@ -32,40 +62,28 @@ function openCarrinho(){
                         <p class="parcelacart"> ${cart.price.installments}x de R$ ${cart.price.installmentValue.toFixed(2)}</p>
                         <p class="valorcart">R$ ${cart.price.value.toFixed(2)} à vista </p>
                         </div>
-                        <button class="btnremover">X</button>
+                        <button class="btnremover" id=${cart.id}>X</button>
                         </li>
-                         
                         
                         
-                       
+                        
+                        
                         
                         `)
                         
                     })
-                    ulcart.insertAdjacentHTML("beforeend",`
-                    <li class="subtotal>
-                    <p class="subtotalparcelado">10x de R$ 0,00 </p> 
-                    <p class="subtotalavista">ou R$ 0,00 à vista</p>
-                    </li>
-                    `)
-                }
-                
-            })
-        }
-        openCarrinho()
-        
-//  function removerItem() {
-//             const btnRemover = document.querySelectorAll("btnremover")
-//             const li = document.querySelectorAll(".licart") 
-            
-//             btnRemover.forEach((btn) => {
-//                 console.log(btnRemover)
-//                 btn.addEventListener("click", () => {   // arrumar isso aqui
-//                     li.remove()
-//                 })
-//             })
-//         }
-//         removerItem()
+                    if(carrinho.length > 0){
+                        ulcart.insertAdjacentHTML("beforeend",`
+                            <li class="subtotal>
+                            <p class="subtotalparcelado">10x de R$ 0,00 </p> 
+                            <p class="subtotalavista">ou R$ 0,00 à vista</p>
+                            </li>
+                        `)
+                        }
+                        removerItem()
+                    }
+                    
+                    
 
         
         function ColocarTextos(item) {
