@@ -93,6 +93,7 @@ li div{
 }
 .imagemgrande  {
     height: 200px;
+    width: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -121,7 +122,7 @@ li div{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 48px;
+    height: 64px;
 }
 
 .carrinhobtn img{
@@ -206,6 +207,7 @@ li div{
 }
 .imgcart img{
     height: 150px;
+    width: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -219,12 +221,14 @@ li div{
     align-items: center;
     margin-left: 50px;
     gap: 10px;
+    margin-right: 450px;
 }
 .textocart{
     text-align: center;
-    font-size: 40px;
+    font-size: 25px;
     font-weight: bolder;
     color: white;
+    
     
 }
 .valorcart{
@@ -252,8 +256,8 @@ li div{
     margin: auto;
     margin-left: 20%;
     background-color: red;
-    width: 50px;
-    padding: 10px;      /* como padronizar tudo? */
+    width: 45px;
+    padding: 10px;     
 }
 .subtotal{
   display: flex; 
