@@ -135,7 +135,7 @@ li div{
     transition: all 0.5s ease;
     
 }
-.carrinhobtn span{
+.carrinhobtn img{
     height: 4px;
     background-color: black;
     border-radius: 3px;
@@ -154,9 +154,7 @@ li div{
     padding-right: 10px;
     margin-top: 10px;
 }
-.produto{
-  
-}
+
 .titulo{
     border-bottom: 1px solid #bebdbdab;
     color: #717171;
@@ -260,7 +258,29 @@ li div{
     width: 50px;
     padding: 10px;      /* como padronizar tudo? */
 }
-.oi{
-  display: flex;  
+.subtotal{
+  display: flex; 
+  flex-direction: column; 
   justify-content: end;
+  align-items: end;
+  gap: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
 }
+.subtotaltexto{
+    border-bottom: 0.5px solid black;
+    width: 100%;
+    justify-content: end;
+    display: flex;
+}
+.mensagem-temporaria {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1990df;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
