@@ -129,28 +129,42 @@ function ColocarTextos() {
     });
   }
 
-function ColocarImagens() {
-  data.items.forEach((produto) => {
-    const imagensPequenasContainer = document.getElementById(`imagensp${produto.product.id}`);
-    const imagensGrandesContainer = document.getElementById(`imagensg${produto.product.id}`);
-    let i = 0;
-
-    produto.product.images.forEach((img) => {
-      if (i < 3) {
-        imagensPequenasContainer.insertAdjacentHTML(
-          "beforeend",
-          `<img class="imagens_pequenas" src="${img}">`
-        );
-      } else {
-        imagensGrandesContainer.insertAdjacentHTML(
-          "beforeend",
-          `<img class="imagemgrande" src="${img}">`
-        );
-      }
-      i++;
+  function ColocarImagens() {
+    data.items.forEach((produto) => {
+      const imagensPequenasContainer = document.getElementById(`imagensp${produto.product.id}`);
+      const imagensGrandesContainer = document.getElementById(`imagensg${produto.product.id}`);
+      let i = 0;
+  
+      produto.product.images.forEach((img) => {
+        if (i < 3) {
+          imagensPequenasContainer.insertAdjacentHTML(
+            "beforeend",
+            `<img class="imagens_pequenas" src="${img}" alt="Imagem Pequena">`
+          );
+        } else {
+          imagensGrandesContainer.insertAdjacentHTML(
+            "beforeend",
+            `<img class="imagemgrande" src="${img}" alt="Imagem Grande">`
+          );
+        }
+        i++;
+      });
+  
+      
+      imagensPequenasContainer.querySelectorAll(".imagens_pequenas").forEach((imagem) => {
+        imagem.addEventListener("click", () => {
+          ampliarImagem(imagem.src);
+        });
+      });
+  
+     
+      imagensGrandesContainer.querySelectorAll(".imagemgrande").forEach((imagem) => {
+        imagem.addEventListener("click", () => {
+          ampliarImagem(imagem.src);
+        });
+      });
     });
-  });
-}
+  }
 
 function montarLista() {
   const ulProdutos = document.querySelector(".produtos");
@@ -212,4 +226,36 @@ function btnFav(){
 }
 btnFav()
 
-
+function ampliarImagem(src) {
+    
+    const modal = document.createElement("div");
+    modal.className = "modal-imagem";
+    modal.style.position = "fixed";
+    modal.style.top = "0";
+    modal.style.left = "0";
+    modal.style.width = "100%";
+    modal.style.height = "100%";
+    modal.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+    modal.style.display = "flex";
+    modal.style.alignItems = "center";
+    modal.style.justifyContent = "center";
+    modal.style.zIndex = "1000";
+  
+    
+    const imagemAmpliada = document.createElement("img");
+    imagemAmpliada.src = src;
+    imagemAmpliada.style.MaxWidth = "100%";
+    imagemAmpliada.style.MaxHeight = "100%";
+    imagemAmpliada.style.borderRadius = "10px";
+  
+    
+    modal.appendChild(imagemAmpliada);
+  
+    
+    document.body.appendChild(modal);
+  
+    
+    modal.addEventListener("click", () => {
+      modal.remove();
+    });
+  }

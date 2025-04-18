@@ -80,14 +80,12 @@ li div{
     
 }
 .imagens_pequenas img:hover{
-     transform: scale(1.6);  
      border-color: yellow;
      border: 1px solid yellow;
 }
 .imagens_pequenas img {
     height: 45px;
     border: 1px solid #3837371c;
-    transition: all 1s ease;
     aspect-ratio:  1/1;
     
 }
@@ -100,24 +98,17 @@ li div{
     margin: auto;
     margin-left: 100px; 
     margin-right: 100px;
-    transition: all 1s ease;   
+    cursor: pointer;  
 }
 .imagemgrande:hover{
-    transform: scale(1.25); 
     border-color: yellow;
     border: 1px solid yellow;
 }
-.imagemgrandetv:hover{
-    transform: scale(1.25); 
-    border-color: yellow;
-    border: 1px solid yellow;
-}   
-.imagemgrandetv{
-    height: 200px; 
-    margin-right: 100px;
-    margin-left: 100px;
-    transition: all 1s ease;
-}
+
+
+
+    
+
 .logo {
     display: flex;
     justify-content: center;
@@ -303,4 +294,16 @@ li div{
     font-size: 20px;
     
 }
+.modal-imagem {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
