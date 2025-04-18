@@ -285,15 +285,18 @@ li div{
 }
 .notificacao {
     position: absolute; /* Posiciona a notificação em relação ao botão */
-    bottom: -20px; /* Ajusta a posição para ficar abaixo do botão */
-    left: -20px; /* Alinha à esquerda do botão */
+    bottom: -35px; /* Ajusta a posição para ficar abaixo do botão */
+    left: -25px; /* Alinha à esquerda do botão */
     background-color: red;
-    height: 25px;
-    width: 25px;
+    height: 35px;
+    width: 35px;
     align-items: center;
     display: flex;
     justify-content: center;
-    border-radius: 25px;
+    border-radius: 35px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
     
 }
 
