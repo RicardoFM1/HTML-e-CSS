@@ -28,7 +28,7 @@ function removerItem() {
       btn.addEventListener("click", () => {
         const index = carrinho.findIndex((produto) => produto.id == btn.id);
         carrinho.splice(index, 1); 
-        let div = document.querySelector(".notificacao");
+          const div = document.querySelector(".notificacao");
           const p = document.createElement("p");
           div.append(p)
           div.innerHTML = carrinho.length;
@@ -118,7 +118,7 @@ function ColocarTextos() {
         btnadd.addEventListener("click", () => {
           carrinho.push(produto.product); 
           mostrarMensagem("Você adicionou esse item ao carrinho!");
-          let div = document.querySelector(".notificacao");
+          const div = document.querySelector(".notificacao");
           const p = document.createElement("p");
           div.append(p)
           div.innerHTML = carrinho.length;

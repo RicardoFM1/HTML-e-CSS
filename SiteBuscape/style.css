@@ -97,7 +97,7 @@ li div{
     justify-content: center;
     align-items: center;
     margin: auto;
-    margin-left: 100px; /* como fazer uma possível mudança para não interferir em outras resoluçoes? */
+    margin-left: 100px; 
     margin-right: 100px;
     transition: all 1s ease;   
 }
@@ -281,12 +281,12 @@ li div{
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
   .carrinhobtn {
-    position: relative; /* Define o botão como referência para posicionamento */
+    position: relative; 
 }
 .notificacao {
-    position: absolute; /* Posiciona a notificação em relação ao botão */
-    bottom: -35px; /* Ajusta a posição para ficar abaixo do botão */
-    left: -25px; /* Alinha à esquerda do botão */
+    position: absolute; 
+    bottom: -35px; 
+    left: -25px;
     background-color: red;
     height: 35px;
     width: 35px;
