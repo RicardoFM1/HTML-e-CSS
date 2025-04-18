@@ -123,25 +123,22 @@ li div{
     align-items: center;
     height: 48px;
 }
-.carrinhobtn{
-    background: none;
-    border: none;
+
+.carrinhobtn img{
+    height: 60px;
+    width: 70px;
+    align-content: center;
+    background-color: black;
+    border-radius: 3px;
+    margin-right: -10px;
+    margin-bottom: -16px;
+    margin-top: -16px;
+    margin-left: -16px;
     cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 20px;
     transition: all 0.5s ease;
     
 }
-.carrinhobtn img{
-    height: 4px;
-    background-color: black;
-    border-radius: 3px;
-   
-}
-.carrinhobtn:hover{
+.carrinhobtn img:hover{
     transform: scale(1.6);
 }
 
@@ -283,4 +280,3 @@ li div{
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
-  

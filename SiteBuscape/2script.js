@@ -177,3 +177,23 @@ function mostrarMensagem(mensagem) {
 }
 
 montarLista();
+
+function btnFav(){
+    data.items.forEach((produto) => {
+        const btnFav = document.getElementById(`btnfav${produto.product.id}`);
+        const imgFav = document.getElementById(`imgfav${produto.product.id}`);
+        let éFavorito = false;
+    
+        btnFav.addEventListener("click", () => {
+        if (éFavorito) {
+            imgFav.src = "./IMAGENS/Botaofav/botaofav.png";
+            mostrarMensagem("Você removeu esse item dos favoritos!");
+        } else {
+            imgFav.src = "./IMAGENS/Botaofav/botaofav2.png";
+            mostrarMensagem("Você adicionou esse item aos favoritos!");
+        }
+        éFavorito = !éFavorito;
+        });
+    });
+}
+btnFav()
