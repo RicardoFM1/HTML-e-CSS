@@ -5,7 +5,7 @@ function openCarrinho() {
   const button = document.querySelector(".carrinhobtn");
   button.addEventListener("click", () => {
     const ulcart = document.querySelector(".cartul");
-    if (ulcart) {
+    if (ulcart) { 
       ulcart.remove();
     } else {
       const header = document.querySelector("header");
