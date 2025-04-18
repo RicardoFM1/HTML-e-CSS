@@ -280,3 +280,20 @@ li div{
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
+  .carrinhobtn {
+    position: relative; /* Define o botão como referência para posicionamento */
+}
+.notificacao {
+    position: absolute; /* Posiciona a notificação em relação ao botão */
+    bottom: -20px; /* Ajusta a posição para ficar abaixo do botão */
+    left: -20px; /* Alinha à esquerda do botão */
+    background-color: red;
+    height: 25px;
+    width: 25px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 25px;
+    
+}
+
