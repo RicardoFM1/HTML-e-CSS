@@ -12,7 +12,7 @@ export const data = {
         ],
 
         price: {
-          value: 3509.1,
+          value: 3509.00,
           installments: 10,
           installmentValue: 389.9,
         },

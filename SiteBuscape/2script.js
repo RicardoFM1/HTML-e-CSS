@@ -80,22 +80,47 @@ function removerItem() {
    
   }
 
-function somarSubtotal() {
-  const subtotalParcelado = document.querySelector(".subtotalparcelado");
-  const subtotalAVista = document.querySelector(".subtotalavista");
-
-  if (carrinho.length === 0) {
-    subtotalParcelado.innerText = "0x de R$ 0,00";
-    subtotalAVista.innerText = "ou R$ 0,00 à vista";
-    return;
+  function somarSubtotal() {
+    const subtotalParcelado = document.querySelector(".subtotalparcelado");
+    const subtotalAVista = document.querySelector(".subtotalavista");
+  
+    
+    if (!subtotalParcelado || !subtotalAVista) {
+      console.error("Elementos do subtotal não encontrados no DOM.");
+      return;
+    }
+  
+  
+    if (carrinho.length === 0) {
+      subtotalParcelado.innerText = "0x de R$ 0,00";
+      subtotalAVista.innerText = "ou R$ 0,00 à vista";
+      return;
+    }
+  
+    const numeroParcelas = 10; 
+  
+    
+    const totalAVista = carrinho.reduce((acc, produto) => {
+      if (!produto.price || isNaN(produto.price.value)) {
+        console.error("O preço do produto não é válido:", produto);
+        return acc;
+      }
+      return acc + produto.price.value;
+    }, 0);
+  
+    
+    const totalParcelado = carrinho.reduce((acc, produto) => {
+      if (!produto.price || isNaN(produto.price.installmentValue)) {
+        console.error("O valor parcelado do produto não é válido:", produto);
+        return acc;
+      }
+      return acc + produto.price.installmentValue * numeroParcelas;
+    }, 0);
+  
+    
+    subtotalParcelado.textContent = `${numeroParcelas}x de R$ ${(totalParcelado / numeroParcelas).toFixed(2)}`;
+    subtotalAVista.textContent = `ou R$ ${totalAVista.toFixed(2)} à vista`;
   }
-  const totalAVista = carrinho.reduce((acc, produto) => acc + produto.price.value, 0);
-  const totalParcelado = totalAVista / 10;
-  const numeroParcelas = 10;
-
-  subtotalParcelado.textContent = `${numeroParcelas}x de R$ ${totalParcelado.toFixed(2)}`;
-  subtotalAVista.textContent = `ou R$ ${totalAVista.toFixed(2)} à vista`;
-}
 
 function ColocarTextos() {
     data.items.forEach((produto) => {
