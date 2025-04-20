@@ -5,9 +5,10 @@ export const data = {
         id: 2321312,
         name: "Smartphone Apple iPhone 7 128GB",
         images: [
-          "./IMAGENS/ImagensCelular/image.png",
+          
           "./IMAGENS/ImagensCelular/image2.png",
           "./IMAGENS/ImagensCelular/image3.png",
+          "./IMAGENS/ImagensCelular/image4.png",
           "./IMAGENS/ImagensCelular/imagemgrande.png",
         ],
 
@@ -21,7 +22,7 @@ export const data = {
     {
       product: {
         id: 9971,
-        name: "Smart TV Samsung Série 4 UN32J4300AG 32 polegadas LED Plana",
+        name: "Smart TV Samsung Série 4 UN32J4300AG 50 polegadas LED Plana",
         images: [
           "./IMAGENS/ImagensTV/imagetv2.png",
           "./IMAGENS/ImagensTV/imagetv3.png",
