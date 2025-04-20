@@ -5,10 +5,9 @@ export const data = {
         id: 2321312,
         name: "Smartphone Apple iPhone 7 128GB",
         images: [
-          
+          "./IMAGENS/ImagensCelular/imageCelular.png",
           "./IMAGENS/ImagensCelular/imageCelular2.png",
           "./IMAGENS/ImagensCelular/imageCelular3.png",
-          "./IMAGENS/ImagensCelular/imageCelular4.png",
           "./IMAGENS/ImagensCelular/imagemgrandeCelular.png",
         ],
 
