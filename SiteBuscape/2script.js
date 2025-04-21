@@ -53,8 +53,8 @@ function removerItem() {
                           <div class="produtoscart">
                           <p class="textocart">${produto.name}</p>
                           <p class="parcelacart">${produto.price.installments}x de R$ ${produto.price.installmentValue.toFixed(2)}</p>
-                          <p class="valorcart">R$ ${produto.price.value.toFixed(2)} à vista</p>
-                          </div>
+                          <p class="valorcart">ou R$ ${produto.price.value.toFixed(2)} à vista</p>
+                          </div> 
                           <button class="btnremover" id=${produto.id}>X</button>
                           </li>
                           `
@@ -134,7 +134,7 @@ function ColocarTextos() {
           </h2>
           <span class="destaque">Melhor Preço</span>
           <p><span class="quantidade">${produto.product.price.installments}x R$</span> <span class="preco">${produto.product.price.installmentValue.toFixed(2)}</span></p>
-          <p>ou  <span class="valoravista"> R$ ${produto.product.price.value.toFixed(2)}</span> à vista</p>
+          <p>ou  <span class="valoravista">R$ ${produto.product.price.value.toFixed(2)}</span> à vista</p>
           <button id="btnadd${produto.product.id}" class="botaotexto">Adicionar ao carrinho<span class="seta">ㅤ></span> </button>
           </div>`
         );
