@@ -8,7 +8,7 @@ export const data = {
           "./IMAGENS/imagensCelular/imageCelular.png",
           "./IMAGENS/imagensCelular/imageCelular2.png",
           "./IMAGENS/imagensCelular/imageCelular3.png",
-          "./IMAGENS/imagensCelular/imagemgrandeCelular.png",
+          "./IMAGENS/imagensCelular/ImagemgrandeCelular.png",
         ],
 
         price: {
@@ -40,10 +40,10 @@ export const data = {
         id: 6717131,
         name: "Câmera Digital Canon EOS Rebel T5i 18.0 Megapixels",
         images: [
-          "./IMAGENS/imagensCamera/imagecamera.png",
-          "./IMAGENS/imagensCamera/imagecamera2.png",
-          "./IMAGENS/imagensCamera/imagecamera3.png",
-          "./IMAGENS/imagensCamera/imagecameragrande.png",
+          "./IMAGENS/imagensCamera/imageCamera.png",
+          "./IMAGENS/imagensCamera/imageCamera2.png",
+          "./IMAGENS/imagensCamera/imageCamera3.png",
+          "./IMAGENS/imagensCamera/imageCameraGrande.png",
         ],
         price: {
           value: 1999.2,
