@@ -5,10 +5,10 @@ export const data = {
         id: 2321312,
         name: "Smartphone Apple iPhone 7 128GB",
         images: [
-          "./IMAGENS/ImagensCelular/imageCelular.png",
-          "./IMAGENS/ImagensCelular/imageCelular2.png",
-          "./IMAGENS/ImagensCelular/imageCelular3.png",
-          "./IMAGENS/ImagensCelular/imagemgrandeCelular.png",
+          "./IMAGENS/imagensCelular/imageCelular.png",
+          "./IMAGENS/imagensCelular/imageCelular2.png",
+          "./IMAGENS/imagensCelular/imageCelular3.png",
+          "./IMAGENS/imagensCelular/imagemgrandeCelular.png",
         ],
 
         price: {
@@ -23,10 +23,10 @@ export const data = {
         id: 9971,
         name: "Smart TV Samsung Série 4 UN32J4300AG 32 polegadas LED Plana",
         images: [
-          "./IMAGENS/ImagensTV/imagetv2.png",
-          "./IMAGENS/ImagensTV/imagetv3.png",
-          "./IMAGENS/ImagensTV/imagetv4.png",
-          "./IMAGENS/ImagensTV/imageTvgrande.png",
+          "./IMAGENS/imagensTV/imagetv2.png",
+          "./IMAGENS/imagensTV/imagetv3.png",
+          "./IMAGENS/imagensTV/imagetv4.png",
+          "./IMAGENS/imagensTV/imageTvgrande.png",
         ],
         price: {
           value: 1139.9,
@@ -40,10 +40,10 @@ export const data = {
         id: 6717131,
         name: "Câmera Digital Canon EOS Rebel T5i 18.0 Megapixels",
         images: [
-          "./IMAGENS/ImagensCamera/imagecamera.png",
-          "./IMAGENS/ImagensCamera/imagecamera2.png",
-          "./IMAGENS/ImagensCamera/imagecamera3.png",
-          "./IMAGENS/ImagensCamera/imagecameragrande.png",
+          "./IMAGENS/imagensCamera/imagecamera.png",
+          "./IMAGENS/imagensCamera/imagecamera2.png",
+          "./IMAGENS/imagensCamera/imagecamera3.png",
+          "./IMAGENS/imagensCamera/imagecameragrande.png",
         ],
         price: {
           value: 1999.2,
@@ -57,10 +57,10 @@ export const data = {
         id: 6717141,
         name: "Lenovo IdeaPad 310 80UH0004BR Intel Core i7-6500U 2.5 GHz 8192 MB 1024 GB",
         images: [
-          "./IMAGENS/ImagensNotebook/imagenotebook.png",
-          "./IMAGENS/ImagensNotebook/imagenotebook2.png",
-          "./IMAGENS/ImagensNotebook/imagenotebook3.png",
-          "./IMAGENS/ImagensNotebook/imagenotebookgrande.png",
+          "./IMAGENS/imagensNotebook/imagenotebook.png",
+          "./IMAGENS/imagensNotebook/imagenotebook2.png",
+          "./IMAGENS/imagensNotebook/imagenotebook3.png",
+          "./IMAGENS/imagensNotebook/imagenotebookgrande.png",
         ],
         price: {
           value: 2599.0,
