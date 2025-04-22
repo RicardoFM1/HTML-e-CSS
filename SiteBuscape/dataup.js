@@ -8,7 +8,7 @@ export const data = {
           "./IMAGENS/imagensCelular/imageCelular.png",
           "./IMAGENS/imagensCelular/imageCelular2.png",
           "./IMAGENS/imagensCelular/imageCelular3.png",
-          "./IMAGENS/imagensCelular/ImagemgrandeCelular.png",
+          "./IMAGENS/imagensCelular/imagemgrandeCelular.png",
         ],
 
         price: {
@@ -23,9 +23,9 @@ export const data = {
         id: 9971,
         name: "Smart TV Samsung Série 4 UN32J4300AG 32 polegadas LED Plana",
         images: [
+          "./IMAGENS/imagensTV/imagetv.png",
           "./IMAGENS/imagensTV/imagetv2.png",
           "./IMAGENS/imagensTV/imagetv3.png",
-          "./IMAGENS/imagensTV/imagetv4.png",
           "./IMAGENS/imagensTV/imageTvgrande.png",
         ],
         price: {
