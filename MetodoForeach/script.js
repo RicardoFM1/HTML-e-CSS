@@ -6,7 +6,7 @@
 //         ul.insertAdjacentHTML("beforeend",`
 //              <li>
 //                 <p>${produto.name}</p>
-//                 <p>${produto.price}</p>
+//                 <p>${produto.price}</p> 
 //                 <p>${produto.descricao}</p>
 //                 <button id="${produto.id}add">Adicionar ao carrinho</button>
 //             </li>

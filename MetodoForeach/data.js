@@ -5,7 +5,7 @@
 //         price:2500,
 //         descricao:"Televisão bonita demais"
 //     },
-//     {
+//     { 
 //         id:2,
 //         name:"Geladeira ",
 //         price:4129,
