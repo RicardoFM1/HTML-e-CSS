@@ -122,6 +122,13 @@ function removerItem() {
     subtotalAVista.textContent = `ou R$ ${totalAVista.toFixed(2)} à vista`;
   }
 
+  const div = document.querySelector(".notificacao");
+  const p = document.createElement("p");
+  div.append(p)
+  div.innerHTML = carrinho.length;
+
+
+
 function ColocarTextos() {
     data.items.forEach((produto) => {
       const textosContainer = document.getElementById(`textos${produto.product.id}`);

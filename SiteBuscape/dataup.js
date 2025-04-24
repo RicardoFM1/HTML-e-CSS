@@ -21,7 +21,7 @@ export const data = {
     {
       product: {
         id: 9971,
-        name: "Smart TV Samsung Série 4 UN32J4300AG 32 polegadas LED Plana",
+        name: "Smart TV Samsung Série 4 UN32J4300AG 50 polegadas LED Plana",
         images: [
           "./IMAGENS/imagensTV/imagetv.png",
           "./IMAGENS/imagensTV/imagetv2.png",
